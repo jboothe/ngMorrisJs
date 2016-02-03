@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["app-routes.js"],"sourcesContent":["(function () {\n  'use strict';\n\n  angular\n    .module('ngMorrisJs')\n    .config(config);\n\n  function config($urlRouterProvider) {\n    $urlRouterProvider.otherwise('/home');\n  }\n}());\n"],"file":"app-routes.js","sourceRoot":"/source/"}

@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["line/line-module.js"],"sourcesContent":["(function () {\n  'use strict';\n\n  /* @ngdoc object\n   * @name line\n   * @description\n   *\n   */\n  angular\n    .module('line', [\n      'ui.router'\n    ]);\n}());\n"],"file":"line/line-module.js","sourceRoot":"/source/"}

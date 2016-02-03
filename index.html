@@ -1,1 +1,74 @@
-<!DOCTYPE html><html lang="en" data-ng-app="ngMorrisJs"><head><title>ngMorrisJs Demo</title><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes"><link rel="stylesheet" href="vendor/vendor-efe2c21678.css"><link rel="stylesheet" href="css/app-bc93ab77e1.css"></head><body><div class="navbar navbar-default navbar navbar-fixed-top" role="navigation"><div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" type="button" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed"><span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#/">ngMorrisJs</a></div><div class="navbar-collapse collapse" collapse="navCollapsed"><ul class="nav navbar-nav"><li data-ui-sref-active="active"><a data-ui-sref="home">Home</a></li></ul></div><a class="github-ribbon" href="https://github.com/jboothe/ngMorrisJs"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a></div><div data-ui-view></div><script src="vendor/vendor-d45e8c8226.js"></script><script src="js/app-cb33a7851a.js"></script></body></html>
+<!DOCTYPE html>
+<html lang='en' data-ng-app='ngMorrisJs'>
+  <head>
+    <title>ngMorrisJs Demo</title>
+    <meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes'>
+    <!-- inject:head:js -->
+    <!-- endinject -->
+    <!-- inject:html -->
+    <!-- endinject -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/morris.js/morris.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/home/home.css">
+    <link rel="stylesheet" href="css/line/line.css">
+    <!-- endinject -->
+  </head>
+  <body>
+
+    <div class='navbar navbar-default navbar navbar-fixed-top' role='navigation'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle collapsed navbar-left'
+                  type='button'
+                  ng-init='navCollapsed = true'
+                  ng-click='navCollapsed = !navCollapsed'>
+            <span class='sr-only'>Toggle Navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='#/'>ngMorrisJs</a>
+        </div>
+        <div class='navbar-collapse collapse' collapse='navCollapsed'>
+          <ul class='nav navbar-nav'>
+            <li data-ui-sref-active='active'>
+              <a data-ui-sref='home'>Home</a>
+            </li>
+          </ul>
+        </div>
+      <a class="github-ribbon" href="https://github.com/jboothe/ngMorrisJs">
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub">
+      </a>
+    </div>
+
+      <div data-ui-view>
+
+      </div>
+
+    <!-- bower:js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/raphael/raphael.js"></script>
+    <script src="vendor/mocha/mocha.js"></script>
+    <script src="vendor/morris.js/morris.js"></script>
+    <script src="vendor/angular-mocks/angular-mocks.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="js/line/line-module.js"></script>
+    <script src="js/line/line-routes.js"></script>
+    <script src="js/line/line-controller.js"></script>
+    <script src="js/home/home-module.js"></script>
+    <script src="js/home/home-routes.js"></script>
+    <script src="js/home/home-controller.js"></script>
+    <script src="js/home/drivers-service.js"></script>
+    <script src="js/app-module.js"></script>
+    <script src="js/directives/ng-morris-js.js"></script>
+    <script src="js/app-routes.js"></script>
+    <!-- endinject -->
+  </body>
+</html>
