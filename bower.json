@@ -1,0 +1,45 @@
+{
+  "name": "ngMorrisJs",
+  "version": "0.1.0",
+  "description": "Angular 1.x wrapper directives for MorrisJS line, bar and donut Charts",
+  "main": "dist/angular-morris-chart.min.js",
+  "authors": [
+    "Jeff Boothe <jeff.boothe@reurgency.com>"
+  ],
+  "keywords": [
+    "Morris",
+    "MorrisJS",
+    "Morris",
+    "Charts",
+    "Angular",
+    "AngularJS",
+    "graphs",
+    "bar",
+    "chart",
+    "line",
+    "chart",
+    "donut",
+    "chart",
+    "data visualization"
+  ],
+  "license": "ISC",
+  "homepage": "http://jboothe.github.io/ngMorrisJs/",
+  "private": false,
+  "dependencies": {
+    "angular": "~1.4.*",
+    "morris.js": "^0.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.*",
+    "angular-bootstrap": "~0.13.3",
+    "angular-ui-router": "~0.2.10",
+    "bootstrap": "~3.2.0"
+  },
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": "*"
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:100,300,400,700,400italic|Material+Icons:400);
+
+@font-family-sans-serif: "Roboto", Arial, sans-serif;
+@font-family-sans-cond: "Oswald", Helvetica, sans-serif;
+@text-color: #313946;
+@text-red: #ff0000;
+/* Red */
+@bgDefault      : #e74c3c;
+@bgHighlight    : #c0392b;
+@colDefault     : #ecf0f1;
+@colHover       : #ffbbbc;
+
+html, body {
+  font-family: @font-family-sans-serif;
+  color: @text-color;
+  font-weight: 300;
+}
+
+h1, h2, h3 { font-family: @font-family-sans-cond; font-weight: 300; }
+h1.thin, h2.thin, h3.thin { font-family: @font-family-sans-serif; font-weight: 100; }
+
+.jumbotron p {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.navbar {
+  border-radius: 0;
+}
+.navbar-default {
+    background-color: @bgDefault;
+    border-color: @bgHighlight;
+    .navbar-brand {
+        color: @colDefault;
+        &:hover, &:focus {
+            color: @colHover; }}
+    .navbar-nav {
+        > li {
+            > a {
+                color: @colDefault;
+                &:hover, &:focus {
+                    color: @colHover;   }}}
+        .active {
+            > a, > a:hover, > a:focus {
+                color: @colHover;
+                background-color: @bgHighlight; }}
+        .open {
+            > a, > a:hover, > a:focus {
+                color: @colHover;
+                background-color: @bgHighlight;
+                .caret {
+                    border-top-color: @colHover;
+                    border-bottom-color: @colHover; }}}
+        > .dropdown {
+            > a {
+                .caret {
+                    border-top-color: @colDefault;
+                    border-bottom-color: @colDefault; }
+                &:hover, &:focus {
+                    .caret {
+                        border-top-color: @colHover;
+                        border-bottom-color: @colHover; }}}}}
+    .navbar-toggle {
+        border-color: @bgHighlight;
+        &:hover, &:focus {
+            background-color: @bgHighlight; }
+        .icon-bar {
+            background-color: @colDefault; }}}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+      color: @colDefault;
+      &:hover, &:focus {
+          color: @colHover;
+          background-color: @bgHighlight;
+      }
+    }
+
+    .navbar {
+      border-radius: 0;
+    }
+
+}
+
+.navbar-toggle.navbar-left {
+  float: left;
+  margin-left: 10px;
+}
+
+.github-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}

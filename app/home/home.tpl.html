@@ -1,0 +1,115 @@
+<div class="jumbotron">
+  <!--
+  <div class="">
+    <div class="card-background">
+        <img class="card-bkimg" alt="" src="images/bg-red-paper.jpg">
+    </div>
+  </div>
+  -->
+  <div class="container">
+    <h1 class="thin">ngMorrisJs </h1>
+    <p>AngularJS Chart Directives for MorrisJS Area, Line, Bar and Donut Charts</p>
+    <p>
+      ngMorrisJS supports configuration of ALL Morris Chart options where others allow for only a few chart options.
+    </p>
+
+    <hr/>
+
+    <div class="row">
+
+        <!-- item -->
+        <div class="col-md-4 text-center">
+            <div class="panel panel-danger panel-pricing">
+                <div class="panel-heading">
+                    <i class="fa fa-check-square-o"></i>
+                    <h3>Features</h3>
+                </div>
+
+                <ul class="list-group text-center">
+                    <li class="list-group-item"> Very Easy to Use</li>
+                    <li class="list-group-item"> Use Any/All MorrisJS Options</li>
+                    <li class="list-group-item"> Reverse Range Tips</li>
+                    <li class="list-group-item"> Demos &amp; Tutorials</li>
+                    <li class="list-group-item"> Angular Best Practices</li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- /column 1 -->
+
+        <div class="col-md-8">
+          <ng-morris-line-chart
+            chart-options="homeCtrl.driverLineChart.options"
+            chart-data="homeCtrl.driverLineChart.data">
+          </ng-morris-line-chart>
+        </div>
+
+      </div>
+      <!-- /row -->
+  </div>
+  <!-- /container -->
+</div>
+<!-- /jumbotron -->
+
+
+
+
+
+<!-- <div ng-controller="DriverChartsCtrl as vm"> -->
+<div class="container">
+
+  <h1 class="md-headline font-thin m-t-sm">Line Chart</h1>
+  <ng-morris-line-chart
+    chart-options="homeCtrl.driverLineChart.options"
+    chart-data="homeCtrl.driverLineChart.data">
+  </ng-morris-line-chart>
+  <div class="md-caption w-full text-center m-t-n">Rounds</div>
+
+  <h1 class="md-headline font-thin m-t-sm">Area Chart</h1>
+  <ng-morris-area-chart
+    chart-options="homeCtrl.driverLineChart.options"
+    chart-data="homeCtrl.driverLineChart.data">
+  </ng-morris-area-chart>
+  <div class="md-caption w-full text-center m-t-n">Rounds</div>
+
+  <h1 class="md-headline font-thin m-t-sm">Bar Chart</h1>
+  <ng-morris-bar-chart
+    chart-options="homeCtrl.driverBarChart.options"
+    chart-data="homeCtrl.driverLineChart.data">
+  </ng-morris-bar-chart>
+  <div class="md-caption w-full text-center m-t-n">Rounds</div>
+
+  <h1 class="md-headline font-thin m-t-sm">Donut Chart</h1>
+  <ng-morris-donut-chart
+    chart-options="homeCtrl.driverDonutChart.options"
+    chart-data="homeCtrl.driverDonutChart.data">
+  </ng-morris-donut-chart>
+
+
+  <h1 class="md-display-1 font-thin m-t-md">Finishing Status</h1>
+  <div>
+    <table class="text-center w-full">
+      <thead>
+      <tr>
+        <th>ROUND</th>
+        <th>QUALIFY</th>
+        <th>FINISH</th>
+        <th>STATUS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="res in homeCtrl.driverLineChart.data track by res.id" ng-class-odd="'jb-list-odd'">
+        <td>{{res.round}}</td>
+        <td>{{-res.qualifyPos}}</td>
+        <td>{{-res.finishPos}}</td>
+        <td>{{res.status}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!--<jb-donut-chart
+    jb-chart-options="homeCtrl.driverDonutChart.options"
+    jb-chart-data="homeCtrl.driverDonutChart.data"></jb-donut-chart>-->
+
+</div>
