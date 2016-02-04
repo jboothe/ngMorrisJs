@@ -16,7 +16,7 @@
 
 'use strict';
 (function(){
-  angular.module('ngMorrisJs')
+  angular.module('ng-morris-js', [])
 
     // Line and Area option settings: https://morrisjs.github.io/morris.js/lines.html
     .directive('ngMorrisLineChart', function () {
