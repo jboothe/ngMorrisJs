@@ -2,17 +2,18 @@
   'use strict';
 
   /* @ngdoc object
-   * @name ngMorrisJs
+   * @name app
    * @description
    *
    */
   angular
-    .module('ngMorrisJs', [
+    .module('app', [
       'ui.router',
       'ui.bootstrap',
       'home',
       'drivers',
-      'line'
+      'line',
+      'ng-morris-js'
     ]);
 }());
 

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ngMorrisJs')
+    .module('app')
     .config(config);
 
   function config($urlRouterProvider) {
