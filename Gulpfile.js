@@ -8,6 +8,8 @@ var _ = require('lodash')
   , path = require('path')
   , $, key;
 
+  var ghPages = require('gulp-gh-pages');
+
 $ = require('gulp-load-plugins')({
   pattern: [
   'browser-sync',
@@ -56,5 +58,25 @@ gulp.task('dev', ['build'], function () {
   gulp.start('browserSync');
   gulp.start('watch');
 });
+
+// -----------------------------
+// BEGIN gh-pages deploy section
+gulp.task('cleanDist', function () {
+  return $.del('./dist/**/*');
+});
+
+gulp.task('build2dist', ['cleanDist'], function () {
+  return gulp.src([
+    config.buildDir + '**/*'
+  ])
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('gh-pages-deploy', ['build2dist'], function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+// END gh-pages deploy section
+// ---------------------------
 
 gulp.task('default', ['dev']);
