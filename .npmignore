@@ -1,0 +1,52 @@
+# Mac
+.DS_Store
+
+# Win
+Thumbs.db
+ehthumbs.db
+
+#IntelliJ
+.idea
+
+#yeoman
+.yo-rc.json
+
+
+# node_modules - npm handles this automatically
+# node_modules
+
+# application files
+report
+coverage
+build
+tmp
+app
+e2e
+gulp
+Gulpfile.js
+
+# Log files
+*.log
+
+#bower_components
+bower_components
+.bowerrc
+
+### Node ###
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# config files
+.editorconfig
+.eslintrc
+.jscsrc
+.jshintrc
+build.config.js
+karma.config.js
+protractor.config.js

@@ -9,6 +9,12 @@ module.exports = {
   // app directories
   appDir: 'app',
 
+  // src dir
+  srcDir: 'src',
+
+  // distribution dir
+  distDir: 'dist',
+
   // unit test directories
   unitTestDir: 'app',
 
