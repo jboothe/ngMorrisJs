@@ -8,6 +8,7 @@ var _ = require('underscore.string')
 
 module.exports = function (gulp, $, config) {
   var isProd = $.yargs.argv.stage === 'prod';
+  var min = $.yargs.argv.min === 'min';
 
   // delete build directory
   gulp.task('clean', function () {
@@ -262,38 +263,6 @@ module.exports = function (gulp, $, config) {
       });
   });
 
-  gulp.task('dist-min', [], function() {
-      return gulp.src([
-          path.join(conf.paths.src, '/lib/**/*.module.js'),
-          path.join(conf.paths.src, '/lib/**/*.js'),
-          path.join('!' + conf.paths.src, '/lib/**/*.spec.js'),
-          path.join('!' + conf.paths.src, '/lib/**/*.mock.js')
-      ])
-          .pipe($.ngAnnotate())
-          .pipe($.concat('angular-morris-chart.min.js'))
-          .pipe($.uglify({
-              preserveComments: $.uglifySaveLicense
-          }))
-          .pipe($.size())
-          .pipe(gulp.dest(path.join(conf.paths.src, '/')));
-  });
-
-
-  gulp.task('dist', [], function() {
-      return gulp.src([
-          path.join(conf.paths.src, '/lib/**/*.module.js'),
-          path.join(conf.paths.src, '/lib/**/*.js'),
-          path.join('!' + conf.paths.src, '/lib/**/*.spec.js'),
-          path.join('!' + conf.paths.src, '/lib/**/*.mock.js')
-      ])
-      //.pipe($.ngAnnotate())
-      .pipe($.concat('angular-morris-chart.js'))
-      // .pipe($.uglify({
-      //     preserveComments: $.uglifySaveLicense
-      // }))
-      .pipe($.size())
-          .pipe(gulp.dest(path.join(conf.paths.src, '/')));
-  });
 
   gulp.task('readme', [], function() {
       return gulp.src([
