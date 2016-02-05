@@ -22,8 +22,11 @@ build
 tmp
 app
 e2e
+
+# Gulp
 gulp
 Gulpfile.js
+gulp.build.config.js
 
 # Log files
 *.log
@@ -47,6 +50,5 @@ pids
 .eslintrc
 .jscsrc
 .jshintrc
-build.config.js
 karma.config.js
 protractor.config.js

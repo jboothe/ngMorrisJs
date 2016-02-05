@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash')
-  , buildConfig = require('./build.config')
+  , buildConfig = require('./gulp.build.config')
   , config = {}
   , gulp = require('gulp')
   , gulpFiles = require('require-dir')('./gulp')

@@ -3,12 +3,10 @@
 var _ = require('underscore.string')
   , fs = require('fs')
   , path = require('path')
-
   , bowerDir = JSON.parse(fs.readFileSync('.bowerrc')).directory + path.sep;
 
 module.exports = function (gulp, $, config) {
   var isProd = $.yargs.argv.stage === 'prod';
-  var min = $.yargs.argv.min === 'min';
 
   // delete build directory
   gulp.task('clean', function () {

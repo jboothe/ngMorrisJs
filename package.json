@@ -1,6 +1,6 @@
 {
   "name": "ng-morris-js",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "Angular 1.x wrapper directives for MorrisJS line, bar and donut Charts",
   "main": "dist/ng-morris-js.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/jboothe/ngMorrisJs.git"
   },
+  "homepage": "http://jboothe.github.io/ngMorrisJs",
   "keywords": [
     "Morris",
     "MorrisJS",
@@ -41,6 +42,7 @@
     "gulp": "^3.8.7",
     "gulp-angular-filesort": "^1.0.4",
     "gulp-autoprefixer": "^2.0.0",
+    "gulp-bump": "^1.0.0",
     "gulp-concat": "^2.3.4",
     "gulp-css-rebase-urls": "0.0.5",
     "gulp-cssmin": "^0.1.6",
@@ -51,6 +53,7 @@
     "gulp-if": "^1.2.4",
     "gulp-imagemin": "^2.0.0",
     "gulp-inject": "^1.5.0",
+    "gulp-inject-version": "^1.0.1",
     "gulp-jscs": "^3.0.0",
     "gulp-jshint": "^1.8.4",
     "gulp-less": "^3.0.1",

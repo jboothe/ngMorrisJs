@@ -1,5 +1,6 @@
 /**
- * Copyright © 2015 Jeff Boothe
+ *   ng-morris-js v0.2.3
+ *   Copyright © 2015-2016 Jeff Boothe
  *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.

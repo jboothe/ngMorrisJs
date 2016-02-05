@@ -1,5 +1,5 @@
 'use strict';
-var buildConfig = require('./build.config.js')
+var buildConfig = require('./gulp.build.config.js')
   , preprocessors = {}
   , buildTestDir
   , templateDir
