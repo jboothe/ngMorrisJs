@@ -220,10 +220,16 @@ module.exports = function (gulp, $, config) {
   });
 
   // copy and optimize images into build directory
-  gulp.task('images', ['clean'], function () {
+  gulp.task('images', ['clean', 'favicon'], function () {
     return gulp.src(config.appImageFiles)
       .pipe($.if(isProd, $.imagemin()))
       .pipe(gulp.dest(config.buildImages));
+  });
+
+  // copy favicon.ico into build directory
+  gulp.task('favicon', ['clean'], function () {
+    return gulp.src(config.appDir + '/favicon.ico')
+      .pipe(gulp.dest(config.buildDir));
   });
 
   gulp.task('copyTemplates', ['bowerInject'], function () {

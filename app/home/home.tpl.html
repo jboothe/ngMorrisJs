@@ -7,21 +7,34 @@
   </div>
   -->
   <div class="container">
-    <h1 class="thin">ngMorrisJs </h1>
-    <p>AngularJS Chart Directives for MorrisJS Area, Line, Bar and Donut Charts</p>
-    <p>
-      ngMorrisJS supports configuration of ALL Morris Chart options where others allow for only a few chart options.
-    </p>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h1 class="thin">ngMorrisJs </h1>
+        <img src="images/logo/ng-morris-js-shield-240.png" alt="ngMorrisJs" />
+      </div>
+      <div class="col-md-8">
+        <ng-morris-line-chart
+          chart-options="homeCtrl.driverLineChart.options"
+          chart-data="homeCtrl.driverLineChart.data">
+        </ng-morris-line-chart>
+      </div>
+    </div>
 
-    <hr/>
+    <br/>
+    <hr>
 
     <div class="row">
+      <div class="col-md-7">
+        <p>AngularJS Chart Directives for MorrisJS Area, Line, Bar and Donut Charts.
+          ngMorrisJS supports configuration of ALL Morris Chart options where others allow for only a few chart options.
+        </p>
+      </div>
 
         <!-- item -->
-        <div class="col-md-4 text-center">
+        <div class="col-md-5 text-center">
             <div class="panel panel-danger panel-pricing">
                 <div class="panel-heading">
-                    <i class="fa fa-check-square-o"></i>
+                    <i class="fa fa-bar-chart-o"></i>
                     <h3>Features</h3>
                 </div>
 
@@ -36,24 +49,12 @@
             </div>
         </div>
         <!-- /column 1 -->
-
-        <div class="col-md-8">
-          <ng-morris-line-chart
-            chart-options="homeCtrl.driverLineChart.options"
-            chart-data="homeCtrl.driverLineChart.data">
-          </ng-morris-line-chart>
-        </div>
-
       </div>
       <!-- /row -->
   </div>
   <!-- /container -->
 </div>
 <!-- /jumbotron -->
-
-
-
-
 
 <!-- <div ng-controller="DriverChartsCtrl as vm"> -->
 <div class="container">

@@ -1,6 +1,6 @@
 # ngMorrisJs Demo App
 This app shows demonstrates usage of ngMorrisJs chart directives
-
+s
 [Demo Page](http://jboothe.github.io/ngMorrisJs/)
 
 
