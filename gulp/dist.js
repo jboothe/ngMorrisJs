@@ -1,3 +1,19 @@
+/**
+ * name: dist gulp task
+ * description: Used to:
+ *   - copy source files from app/directives/ng-morris-js to /src
+ *   - inject version into src files
+ *   - concat files to /dist
+ *   - create a .min minified file in /dist
+ *   - [optionally] bump package.json and bower.json version: property
+ *      > gulp dist --bump=[major, minor, patch]
+ * usage:
+ *   > gulp dist
+ *   > gulp dist --bump=major
+ *   > gulp dist --bump=minor
+ *   > gulp dist --bump=patch
+ */
+
 'use strict';
 
 module.exports = function (gulp, $, config) {
