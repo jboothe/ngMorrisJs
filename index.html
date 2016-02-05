@@ -2,6 +2,7 @@
 <html lang='en' ng-app='app'>
   <head>
     <title>ngMorrisJs Demo</title>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes'>
     <!-- inject:head:js -->
     <!-- endinject -->
@@ -30,7 +31,9 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
-          <a class='navbar-brand' href='#/'>ngMorrisJs</a>
+          <a class='navbar-brand' href='#/'>
+            <img src="images/logo/ng-morris-js-shield-48.png" alt="ngMorrisJs">
+            ngMorrisJs</a>
         </div>
         <div class='navbar-collapse collapse' collapse='navCollapsed'>
           <ul class='nav navbar-nav'>
@@ -59,16 +62,16 @@
     <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- inject:js -->
+    <script src="js/line/line-module.js"></script>
+    <script src="js/line/line-routes.js"></script>
+    <script src="js/line/line-controller.js"></script>
     <script src="js/home/home-module.js"></script>
     <script src="js/home/home-routes.js"></script>
     <script src="js/home/home-controller.js"></script>
     <script src="js/home/drivers-service.js"></script>
-    <script src="js/line/line-module.js"></script>
-    <script src="js/line/line-routes.js"></script>
-    <script src="js/line/line-controller.js"></script>
-    <script src="js/directives/ng-morris-js.js"></script>
     <script src="js/app-module.js"></script>
     <script src="js/app-routes.js"></script>
+    <script src="js/directives/ng-morris-js/ng-morris-js.js"></script>
     <!-- endinject -->
   </body>
 </html>

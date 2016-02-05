@@ -94,6 +94,13 @@ h3.thin {
     border-radius: 0;
   }
 }
+.navbar-brand {
+  padding-top: 6px;
+}
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
 .navbar-toggle.navbar-left {
   float: left;
   margin-left: 10px;
