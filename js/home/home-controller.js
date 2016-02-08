@@ -1,7 +1,7 @@
 /**
  * @ngdoc object
  * @name HomeCtrl
- * @description Controller for  screens
+ * @description Controller for  Home screen
  * @author Created by jboothe on 11/25/15
  */
 
@@ -11,153 +11,36 @@
 
   angular
     .module('home')
-    .controller(ctrlName, HomeCtrl);
+    .controller(ctrlName, Controller);
 
-  HomeCtrl.$inject = ['$log', '$q', 'DriversService'];
-  function HomeCtrl($log, $q, DriversService) {
+  Controller.$inject = ['$log', '$q', 'DriversService'];
+  function Controller($log, $q, DriversService) {
     var homeCtrl = this;
 
-    // Line & Area Chart Options
-    // http://morrisjs.github.io/morris.js/lines.html
-    homeCtrl.driverLineChart = {
-      data: [],
-      options: {
-        xkey: 'round',
-        ykeys: ['finishPos', 'qualifyPos'],
-        labels: ['Finished', 'Qualified'],
-        lineColors: ['rgba(205, 38, 38, 0.5)', 'rgba(100, 100, 100, 0.5)'],
-        lineWidth: 3,
-        pointSize: 4,
-        pointFillColors: ['#c7254e'],
-        pointStrokeColors: ['#ffffff'],
-        ymin: -10,
-        ymax: -1,
-        smooth: true,
-        hideHover: false,
-        // hoverCallback: hoverCallbackFunc,
-        parseTime: false,
-        // postUnits: '%',
-        // preUnits: '$',
-        // dateFormat: dateFormatFunc,
-        // xLabels: "month",
-        // xLabelFormat: xLabelFormatFunc,
-        // xLabelAngle: 0,
-        yLabelFormat: yLabelPosFormatter,
-        goals: [-1.0],
-        goalLineColors: ['#c0c0c0'],
-        goalStrokeWidth: 1,
-        // events: [],
-        // eventStrokeWidth: 1,
-        // eventLineColors: #cccccc,
-        // axes: false,
-        grid: false,
-        // gridTextColor: #888888,
-        // gridTextSize: 12,
-        // gridTextFamiliy: sans-serif,
-        // gridTextWeight: normal,
-        resize: true,
-
-        // Area Chart Options
-        fillOpacity: 0.3,
-        behaveLikeLine: true
-      }
-    };
-
-    // Bar Chart Options
-    // http://morrisjs.github.io/morris.js/bars.html
-    homeCtrl.driverBarChart = {
-      data: [],
-      options: {
-        xkey: 'round',
-        ykeys: ['avgLap', 'fastLap'],
-        labels: ['Avg Lap', 'Fastest Lap'],
-        barColors: ['#777777', '#e74c3c'],
-        stacked: false,
-        hideHover: false,
-        // hoverCallback: hoverCallbackFunc,
-        // axes: false,
-        grid: false,
-        // gridTextColor: #888888,
-        // gridTextSize: 12,
-        // gridTextFamiliy: sans-serif,
-        // gridTextWeight: normal,
-        resize: true,
-        yLabelFormat: yLabelMPHFormatter
-      }
-    };
-
-    // Donut Chart Options
-    // http://morrisjs.github.io/morris.js/donuts.html
-    homeCtrl.driverDonutChart = {
+    homeCtrl.myBarChart = {
       data: [
-        {label: 'Top 5', value: 6},
-        {label: 'Top 10', value: 3},
-        {label: 'DNF', value: 1}
+        {year: '2015 Q1', sales: 3, net: 2, profit: 1},
+        {year: '2015 Q2', sales: 2, net: 0.9, profit: 0.45},
+        {year: '2015 Q3', sales: 1, net: 0.4, profit: 0.2},
+        {year: '2015 Q4', sales: 4, net: 3, profit: 1.5}
       ],
       options: {
-        colors: ['#e74c3c', '#c0392b', '#777777'],
-        resize: true
-        // formatter: donutFormatFunc
+        xkey: 'year',
+        ykeys: ['sales', 'net', 'profit'],
+        labels: ['Sales', 'Net', 'Profit'],
+        barColors: ['#777777', '#e74c3c', 'rgb(11, 98, 164)'],
+        lineColors: ['#777777', '#e74c3c', 'rgb(11, 98, 164)']
       }
     };
 
     activate();
 
     function activate() {
-      var promises = [getDriverRaceResults()]; //eslint-disable-line
+      var promises = []; //eslint-disable-line
 
       return $q.all(promises).then(function () {
         $log.info(ctrlName + ' Activated!');
       });
-    }
-
-    function getDriverRaceResults() {
-      return DriversService.findAll()
-        .then(function (res) {
-          $log.info('Got '+ res.length + ' Driver Race results', res);
-          homeCtrl.driverLineChart.data = negativeData(res, ['qualifyPos', 'finishPos']);
-          homeCtrl.driverBarChart.data = res;
-          getDonutData(res);
-          // homeCtrl.driverDonutChart.data = DriversService.getDonutData(res);
-        },
-        function (error) {
-          $log.error('Error getting Driver Race results', error);
-        });
-    }
-
-    function getDonutData(data) {
-      return DriversService.getDonutData(data)
-        .then(function (res) {
-            homeCtrl.driverDonutChart.data = res;
-            $log.info('Donut Data ', homeCtrl.driverDonutChart.data);
-        });
-    }
-
-    // Convert finish and qualifying position numbers to negative values
-    // to support reversing y-axis of line chart
-    // Takes the data array and an array of properties to be converted to negatives
-    function negativeData(arr, props) {
-      var newArr = arr.map(function (x) {
-        for (var i = 0; i < props.length; i++) {
-          x[props[i]] = x[props[i]] > 0 ? -x[props[i]] : null;
-        }
-        return x;
-      });
-      return newArr;
-    }
-
-    // Formatting Y Label - Note: Math.round is not entirely accurate but close.
-    // Since Morris Chart doesn't have a "force integer" option, we are rounding
-    // to nearest whole number.
-    function yLabelPosFormatter(y) {
-      if (isNaN(y)) { return 'n/a'; }
-      y = Math.round(y);
-      return y === 0 ? 'P1' : 'P' + -y;
-    }
-
-    // Round speed to 2 decimal places and add MPH suffix
-    function yLabelMPHFormatter(y) {
-      return isNaN(y) ? 'n/a' : y.toFixed(2)+' MPH';
     }
 
   }

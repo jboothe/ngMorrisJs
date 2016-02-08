@@ -52,3 +52,7 @@
   padding: 20px;
   margin: 0px;
 }
+.showcase {
+  width: 100%;
+  max-width: 480px;
+}
