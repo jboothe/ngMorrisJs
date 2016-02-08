@@ -1,8 +1,8 @@
 {
   "name": "ng-morris-js",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Angular 1.x wrapper directives for MorrisJS line, bar and donut Charts",
-  "main": "dist/angular-morris-chart.min.js",
+  "main": "dist/ng-morris-js.min.js",
   "authors": [
     "Jeff Boothe <jeff.boothe@reurgency.com>"
   ],
@@ -22,6 +22,40 @@
     "chart",
     "data visualization"
   ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "example",
+    "with-browserify",
+    "plunk-source",
+    "Gruntfile.js",
+    "package.json",
+    "test",
+    ".DS_Store",
+    "Thumbs.db",
+    "ehthumbs.db",
+    ".idea",
+    ".yo-rc.json",
+    "report",
+    "coverage",
+    "build",
+    "tmp",
+    "app",
+    "e2e",
+    "gulp",
+    "Gulpfile.js",
+    "gulp.build.config.js",
+    ".bowerrc",
+    "logs",
+    "*.log",
+    ".editorconfig",
+    ".eslintrc",
+    ".jscsrc",
+    ".jshintrc",
+    "karma.config.js",
+    "protractor.config.js"
+  ],
   "license": "ISC",
   "homepage": "http://jboothe.github.io/ngMorrisJs/",
   "private": false,
@@ -33,7 +67,8 @@
     "angular-mocks": "~1.4.*",
     "angular-bootstrap": "~0.13.3",
     "angular-ui-router": "~0.2.10",
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "angular-highlightjs": "^0.5.1"
   },
   "overrides": {
     "angular": {

@@ -1,6 +1,6 @@
 {
   "name": "ng-morris-js",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Angular 1.x wrapper directives for MorrisJS line, bar and donut Charts",
   "main": "dist/ng-morris-js.js",
   "scripts": {
