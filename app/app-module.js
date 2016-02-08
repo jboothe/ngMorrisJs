@@ -10,6 +10,7 @@
     .module('app', [
       'ui.router',
       'ui.bootstrap',
+      'hljs',
       'home',
       'drivers',
       'line',
