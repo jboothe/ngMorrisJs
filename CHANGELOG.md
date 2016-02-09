@@ -1,5 +1,11 @@
 # Change Log
 
+## [v0.3.4](https://github.com/jboothe/ngMorrisJs/tree/v0.3.4) (2016-02-09)
+[Full Changelog](https://github.com/jboothe/ngMorrisJs/compare/v0.3.3...v0.3.4)
+
+## [v0.3.3](https://github.com/jboothe/ngMorrisJs/tree/v0.3.3) (2016-02-09)
+[Full Changelog](https://github.com/jboothe/ngMorrisJs/compare/v0.3.1...v0.3.3)
+
 ## [v0.3.1](https://github.com/jboothe/ngMorrisJs/tree/v0.3.1) (2016-02-08)
 [Full Changelog](https://github.com/jboothe/ngMorrisJs/compare/v0.3.0...v0.3.1)
 

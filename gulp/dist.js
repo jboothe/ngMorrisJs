@@ -20,7 +20,11 @@ module.exports = function (gulp, $, config) {
 
   var injectVersion = require('gulp-inject-version');
   var bump = require('gulp-bump');
-  
+  var fs = require('fs');
+  var getPackageJson = function () {
+    return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+  };
+
   // Look for bump arg: --bump=[ major, minor, patch ]
   var doBump, bumpType;
   if ($.yargs.argv.bump) {
@@ -48,6 +52,7 @@ module.exports = function (gulp, $, config) {
 
   // Create both min and non-min dist files
   gulp.task('dist', ['copyToSrc'], function () {
+    var pkg = getPackageJson();
     return gulp.src([
       config.srcDir + '**/*',
       '!**/*_test.*',
@@ -55,12 +60,12 @@ module.exports = function (gulp, $, config) {
     ])
       .pipe($.concat('ng-morris-js.js'))
       .pipe(gulp.dest(config.distDir))
-      .pipe($.notify('REG DIST DONE!!'))
       .pipe($.ngAnnotate())
       .pipe($.uglify( {preserveComments: $.uglifySaveLicense} ))
       .pipe($.concat('ng-morris-js.min.js'))
       .pipe(gulp.dest(config.distDir))
-      .pipe($.notify('MIN DIST DONE!!'));
+      .pipe($.notify('DIST package created!'))
+      .pipe($.if(doBump, $.notify('BUMPED version to ' + pkg.version)));
   });
 
 };
