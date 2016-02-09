@@ -77,7 +77,7 @@ myCtrl.myBarChart = {
 ```
 
 ## Change Log
-Please see [CHANGELOG](https://github.com/jboothe/ngMorrisJs/CHANGELOG.md).
+Please see [CHANGELOG](https://github.com/jboothe/ngMorrisJs/blob/master/CHANGELOG.md).
 
 ## Authors
 Jeff Boothe (@dezeloper)
@@ -98,4 +98,4 @@ Inspired by Connor Leech's [ngMorris](https://github.com/cleechtech/ng-morris)
 
 
 ## License
-Please see [LICENSE](https://github.com/jboothe/ngMorrisJs/LICENSE)
+Please see [LICENSE](https://github.com/jboothe/ngMorrisJs/blob/master/LICENSE)
