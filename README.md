@@ -101,4 +101,4 @@ Inspired by Connor Leech's [ngMorris](https://github.com/cleechtech/ng-morris)
 
 ## License
 
-Please see [LICENSE]([Fork it](https://github.com/jboothe/ngMorrisJs/LICENSE)
+Please see [LICENSE](https://github.com/jboothe/ngMorrisJs/LICENSE)
