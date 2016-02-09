@@ -1,6 +1,7 @@
 <a href="http://jboothe.github.io/ngMorrisJs/">
   <img src="http://jboothe.github.io/ngMorrisJs/images/logo/ng-morris-js-shield-240.png" alt="ngMorrisJs logo" title="ngMorrisJs" align="left" height="160" />
 </a>
+
 # ng-morris-js
 Super Easy AngularJS Chart Directives for [MorrisJS](http://morrisjs.github.io/morris.js/index.html) Charts.
 **ng-morris-js** doesn't limit chart options - use ANY or ALL of Morris Chart's native [Area, Line](http://morrisjs.github.io/morris.js/lines.html),  [Bar](http://morrisjs.github.io/morris.js/bars.html) and [Donut](http://morrisjs.github.io/morris.js/donuts.html) options.
@@ -8,6 +9,7 @@ Super Easy AngularJS Chart Directives for [MorrisJS](http://morrisjs.github.io/m
 <a href="http://jboothe.github.io/ngMorrisJs/">
   <img src="http://jboothe.github.io/ngMorrisJs/images/showcase-480.png"  alt="showcase" align="right" />
 </a>
+
 ## [Demo Site](http://jboothe.github.io/ngMorrisJs/)
 Our Demo Site has many useful examples and usage tips.
 
@@ -75,18 +77,15 @@ myCtrl.myBarChart = {
 ```
 
 ## Change Log
-
 Please see [CHANGELOG](https://github.com/jboothe/ngMorrisJs/CHANGELOG.md).
 
 ## Authors
-
 Jeff Boothe (@dezeloper)
 
 [reurgency.com](http://reurgency.com)
 
 
 ## Contributing
-
 1. Create an issue to discuss your idea
 2. [Fork it](https://github.com/jboothe/ngMorrisJs/fork)
 3. Create your local feature branch (`git checkout -b my-new-feature`)
@@ -95,10 +94,8 @@ Jeff Boothe (@dezeloper)
 6. Create a new Pull Request
 
 ## Credits
-
 Inspired by Connor Leech's [ngMorris](https://github.com/cleechtech/ng-morris)
 
 
 ## License
-
 Please see [LICENSE](https://github.com/jboothe/ngMorrisJs/LICENSE)

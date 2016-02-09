@@ -1,6 +1,6 @@
 {
   "name": "ng-morris-js",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Super Easy AngularJS Chart directives for MorrisJS line, bar and donut charts!",
   "main": "dist/ng-morris-js.min.js",
   "authors": [
