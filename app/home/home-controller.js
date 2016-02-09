@@ -13,7 +13,7 @@
     .module('home')
     .controller(ctrlName, Controller);
 
-  Controller.$inject = ['$log', '$q', 'DriversService'];
+  Controller.$inject = ['$log', '$q'];
   function Controller($log, $q, DriversService) {
     var homeCtrl = this;
 
@@ -28,8 +28,7 @@
         xkey: 'year',
         ykeys: ['sales', 'net', 'profit'],
         labels: ['Sales', 'Net', 'Profit'],
-        barColors: ['#777777', '#e74c3c', 'rgb(11, 98, 164)'],
-        lineColors: ['#777777', '#e74c3c', 'rgb(11, 98, 164)']
+        barColors: ['#777777', '#e74c3c', 'rgb(11, 98, 164)']
       }
     };
 

@@ -20,8 +20,8 @@ module.exports = function (gulp, $, config) {
 
   var injectVersion = require('gulp-inject-version');
   var bump = require('gulp-bump');
-
-  // Look for bumpTo arg: --bump=[ major, minor, patch ]
+  
+  // Look for bump arg: --bump=[ major, minor, patch ]
   var doBump, bumpType;
   if ($.yargs.argv.bump) {
     doBump = true;
@@ -32,19 +32,21 @@ module.exports = function (gulp, $, config) {
     return $.del(['./dist/**/*', './src/**/*']);
   });
 
-  // Update bower, component, npm versions:
+  // Update "version" property in bower, component, npm files:
   gulp.task('bump', function(){
     return gulp.src(['./bower.json', './component.json', './package.json'])
     .pipe($.if(doBump, bump({type:bumpType})))
     .pipe(gulp.dest('./'));
   });
 
+  // Copy the directive files from the app to src directory
   gulp.task('copyToSrc', ['clean-dist', 'bump'], function () {
     return gulp.src([config.appDir + '/directives/ng-morris-js/**.*'])
       .pipe(injectVersion())
       .pipe(gulp.dest(config.srcDir))
   });
 
+  // Create both min and non-min dist files
   gulp.task('dist', ['copyToSrc'], function () {
     return gulp.src([
       config.srcDir + '**/*',
