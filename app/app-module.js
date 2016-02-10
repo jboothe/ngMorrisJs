@@ -12,6 +12,7 @@
       'ui.bootstrap',
       'hljs',
       'home',
+      'basic',
       'drivers',
       'line',
       'ng-morris-js'

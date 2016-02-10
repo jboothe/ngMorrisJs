@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang='en' ng-app='app'>
+<html lang='en'>
   <head>
     <title>ngMorrisJs Demo</title>
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/hopscotch.min.css">
+    <link rel="stylesheet" href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/hopscotch.min.css'>
     <meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes'>
     <!-- inject:head:js -->
     <!-- endinject -->
@@ -14,7 +14,7 @@
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body>
+  <body ng-app='app' ng-strict-di>
 
     <div class='navbar navbar-default navbar navbar-fixed-top' role='navigation'>
         <div class='navbar-header'>
@@ -33,9 +33,16 @@
         </div>
         <div class='navbar-collapse collapse' collapse='navCollapsed'>
           <ul class='nav navbar-nav'>
-            <li data-ui-sref-active='active'>
-              <a data-ui-sref='home'>Home</a>
+            <li ui-sref-active='active'>
+              <a ui-sref='home'>Home</a>
             </li>
+            <li ui-sref-active='active'>
+              <a ui-sref='basic'>Basic Demos</a>
+            </li>
+            <li ui-sref-active='active'>
+              <a ui-sref='advanced'>Advanced Demos</a>
+            </li>
+
           </ul>
         </div>
       <a class="github-ribbon" href="https://github.com/jboothe/ngMorrisJs">
@@ -43,7 +50,7 @@
       </a>
     </div>
 
-      <div data-ui-view>
+      <div ui-view>
 
       </div>
 
